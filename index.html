@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craque dos Sonhos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tela-inicial">
+        <h1>Craque dos Sonhos</h1>
+        <button onclick="mostrarTela('tela-escolha')">Iniciar Jogo</button>
+    </div>
+
+    <div id="tela-escolha" class="oculto">
+        <h2>Escolha seu jogador</h2>
+        <input type="text" id="nome-jogador" placeholder="Nome do jogador">
+        <button onclick="iniciarJogo()">Confirmar</button>
+    </div>
+
+    <div id="tela-jogo" class="oculto">
+        <h2 id="nome-exibido"></h2>
+        <p>Use as teclas para jogar! (Setas para mover, espaço para chutar)</p>
+        <canvas id="campo"></canvas>
+    </div>
+
+    <div id="tela-resultado" class="oculto">
+        <h2 id="resultado"></h2>
+        <button onclick="mostrarTela('tela-inicial')">Jogar Novamente</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
